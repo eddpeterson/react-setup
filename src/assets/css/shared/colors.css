@@ -1,0 +1,27 @@
+/*
+ * Color patterns:
+ * 
+ * colorname:      #ccc;
+ * colornameDark:  #999;
+ * colornameLight: #e9e9e9;
+ * colornamePale:  #f9f9f9;
+ *
+ */
+
+@value colorBlack:      #000000;
+@value colorBlackLight: #283141;
+@value colorBlackPale:  #354052;
+@value colorBlue:       #0B4787;
+@value colorBlueLight:  #2EA2F8;
+@value colorGreen:      #34AA44;
+@value colorViolet:     #9CB4CE;
+@value colorVioletDark: #7F8FA4;
+@value colorGray:       #A8AAB7;
+@value colorGrayDark:   #969BA2;
+@value colorGrayLight:  #e9e9e9;
+@value colorGrayPale:   #EFF3F6;
+@value colorYellow:     #FCE202;
+@value colorOrange:     #E87F28;
+@value colorRed:        #F85359;
+@value colorRedDark:    #E64745;
+@value colorWhite:      #FFFFFF;

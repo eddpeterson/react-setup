@@ -1,0 +1,54 @@
+@value colorWhite, colorBlue from './shared/colors.css';
+.button {
+  display:       flex;
+  align-items:   center;
+  background:    colorBlue;
+  color:         colorWhite;
+  border-radius: 7px;
+  cursor:        pointer;
+  padding:       2px 20px;
+}
+.icon {
+  content:    '';
+  background: colorWhite;
+  width:      20px;
+  height:     20px;
+}
+.reloadSingle {
+  margin:       10px;
+  margin-right: 0px;
+  display:      inline-block;
+  position:     relative;
+  height:       2em;
+  padding:      .25em;
+  width:        2em;
+}
+.reloadSingle:before {
+  content:       '';
+  display:       block;
+  border-color:  transparent colorWhite colorWhite colorWhite;
+  border-radius: 50%;
+  border-style:  solid;
+  border-width:  .125em;
+  height:        1.5em;
+  width:         1.5em;
+  transform:     rotate(45deg);
+}
+.reloadSingle:after {
+  content:      '';
+  display:      block;
+  border-color: transparent transparent transparent colorWhite;
+  border-style: solid;
+  border-width: .3125em 0 .3125em .5em;
+  height:       0;
+  position:     absolute;
+  top:          0;
+  left:         50%;
+  width:        0;
+}
+.animate {
+  animation: rotate 1.5s linear infinite;
+}
+@keyframes rotate {
+  100% { transform: rotate(360deg); }
+}

@@ -1,0 +1,81 @@
+@value marginSmall:       12.5px;
+@value margin:            20px;
+@value marginLarge:       32px;
+@value mobileMarginSmall: 6.25px;
+@value mobileMargin:      10px;
+@value mobileMarginLarge: 16px;
+
+@value paddingSmall:       12.5px;
+@value padding:            20px;
+@value paddingLarge:       32px;
+@value mobilePaddingSmall: 6.25px;
+@value mobilePadding:      10px;
+@value mobilePaddingLarge: 16px;
+
+.margin            { margin:        margin; }
+.marginTop         { margin-top:    margin; }
+.marginRight       { margin-right:  margin; }
+.marginBottom      { margin-bottom: margin; }
+.marginLeft        { margin-left:   margin; }
+.marginSmall       { margin:        marginSmall; }
+.marginSmallTop    { margin-top:    marginSmall; }
+.marginSmallRight  { margin-right:  marginSmall; }
+.marginSmallBottom { margin-bottom: marginSmall; }
+.marginSmallLeft   { margin-left:   marginSmall; }
+.marginLarge       { margin:        marginLarge; }
+.marginLargeTop    { margin-top:    marginLarge; }
+.marginLargeRight  { margin-right:  marginLarge; }
+.marginLargeBottom { margin-bottom: marginLarge; }
+.marginLargeLeft   { margin-left:   marginLarge; }
+
+.padding            { padding:        padding; }
+.paddingTop         { padding-top:    padding; }
+.paddingRight       { padding-right:  padding; }
+.paddingBottom      { padding-bottom: padding; }
+.paddingLeft        { padding-left:   padding; }
+.paddingSmall       { padding:        paddingSmall; }
+.paddingSmallTop    { padding-top:    paddingSmall; }
+.paddingSmallRight  { padding-right:  paddingSmall; }
+.paddingSmallBottom { padding-bottom: paddingSmall; }
+.paddingSmallLeft   { padding-left:   paddingSmall; }
+.paddingLarge       { padding:        paddingLarge; }
+.paddingLargeTop    { padding-top:    paddingLarge; }
+.paddingLargeRight  { padding-right:  paddingLarge; }
+.paddingLargeBottom { padding-bottom: paddingLarge; }
+.paddingLargeLeft   { padding-left:   paddingLarge; }
+
+@value deviceMobile from './devices.css';
+
+@media screen and (max-width: deviceMobile) {
+  .margin            { margin:        mobileMargin; }
+  .marginTop         { margin-top:    mobileMargin; }
+  .marginRight       { margin-right:  mobileMargin; }
+  .marginBottom      { margin-bottom: mobileMargin; }
+  .marginLeft        { margin-left:   mobileMargin; }
+  .marginSmall       { margin:        mobileMarginSmall; }
+  .marginSmallTop    { margin-top:    mobileMarginSmall; }
+  .marginSmallRight  { margin-right:  mobileMarginSmall; }
+  .marginSmallBottom { margin-bottom: mobileMarginSmall; }
+  .marginSmallLeft   { margin-left:   mobileMarginSmall; }
+  .marginLarge       { margin:        mobileMarginLarge; }
+  .marginLargeTop    { margin-top:    mobileMarginLarge; }
+  .marginLargeRight  { margin-right:  mobileMarginLarge; }
+  .marginLargeBottom { margin-bottom: mobileMarginLarge; }
+  .marginLargeLeft   { margin-left:   mobileMarginLarge; }
+
+  .padding            { padding:        mobilePadding; }
+  .paddingTop         { padding-top:    mobilePadding; }
+  .paddingRight       { padding-right:  mobilePadding; }
+  .paddingBottom      { padding-bottom: mobilePadding; }
+  .paddingLeft        { padding-left:   mobilePadding; }
+  .paddingSmall       { padding:        mobilePaddingSmall; }
+  .paddingSmallTop    { padding-top:    mobilePaddingSmall; }
+  .paddingSmallRight  { padding-right:  mobilePaddingSmall; }
+  .paddingSmallBottom { padding-bottom: mobilePaddingSmall; }
+  .paddingSmallLeft   { padding-left:   mobilePaddingSmall; }
+  .paddingLarge       { padding:        mobilePaddingLarge; }
+  .paddingLargeTop    { padding-top:    mobilePaddingLarge; }
+  .paddingLargeRight  { padding-right:  mobilePaddingLarge; }
+  .paddingLargeBottom { padding-bottom: mobilePaddingLarge; }
+  .paddingLargeLeft   { padding-left:   mobilePaddingLarge; }
+}

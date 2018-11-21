@@ -1,0 +1,22 @@
+@value colorWhite from "./shared/colors.css";
+
+.app {
+  display:        flex;
+  flex-direction: column;
+  align-items:    center;
+  min-height:     100vh;
+}
+
+.header {
+  display:        flex;
+  flex-direction: column;
+  align-items:    center;
+}
+
+.container {
+  flex:        1;
+  min-width:   100vw;
+  align-items: center;
+  background:  colorWhite;
+}
+

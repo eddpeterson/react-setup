@@ -1,0 +1,9 @@
+@value colorWhite, colorRedDark from './shared/colors.css';
+
+.container {
+  width:           100vw;
+  display:         flex;
+  justify-content: center;
+  background:      colorRedDark;
+  color:           colorWhite;
+}

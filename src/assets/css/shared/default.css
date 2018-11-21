@@ -1,0 +1,15 @@
+@value colorGrayPale, colorBlackLight from "./colors.css";
+
+body {
+  background: colorGrayPale;
+  color:      colorBlackLight;
+  font-family: "Rubik, Helvetica, Arial, sans-serif";
+  font-size:   18px;
+  font-weight: 600;
+  line-height: 32px;
+}
+
+h1 {
+  font-size:   2em;
+  line-height: 1.4em;
+}
