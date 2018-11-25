@@ -1,4 +1,6 @@
 import React from 'react'
+import { hot } from 'react-hot-loader'
+
 import ExchangeRates from './exchange_rates'
 import ExchangeRatesReload from './exchange_rates_reload'
 import Errors from './errors'
@@ -18,4 +20,4 @@ const App = () => (
   </div>
 )
 
-export default App
+export default hot(module)(App)

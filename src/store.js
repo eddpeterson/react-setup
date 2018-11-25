@@ -14,16 +14,10 @@ const middlewares = (process.env.NODE_ENV === 'production')
 let store = null
 const configureStore = () => {
   if (store) return store
+
   store = createStore(
   reducer,
   compose(applyMiddleware(...middlewares)))
-
-  if (module.hot) {
-    module.hot.accept('./reducers', () => {
-      const nextRootReducer = require('./reducers')
-      store.replaceReducer(nextRootReducer)
-    })
-  }
 
   return store
 }
