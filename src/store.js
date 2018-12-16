@@ -1,25 +1,30 @@
-import { compose, createStore, combineReducers, applyMiddleware } from 'redux'
+import { applyMiddleware, combineReducers, compose, createStore } from 'redux'
 import thunk from 'redux-thunk'
 import logger from 'redux-logger'
+import { connectRoutes } from 'redux-first-router'
 import * as reducers from './reducers'
-
-const reducer = combineReducers(reducers)
-
-// explicit about what middlewares go to production
-const middlewares = (process.env.NODE_ENV === 'production')
-  ? [thunk]
-  : [thunk, logger]
+import routesMap from './routes'
 
 // create store only once
 let store = null
-const configureStore = () => {
-  if (store) return store
 
-  store = createStore(
-  reducer,
-  compose(applyMiddleware(...middlewares)))
+const configureStore = (preloadedState) => {
+  if (store) return { store }
+  
+  const options = {
+    initialDispatch: false,
+  }
+  const { reducer, middleware, enhancer, initialDispatch } = connectRoutes(routesMap, options)
+  const rootReducer = combineReducers({ ...reducers, location: reducer })
+  
+  // explicit about what middlewares go to production
+  const middlewares = (process.env.NODE_ENV === 'production')
+    ? [middleware, thunk]
+    : [middleware, thunk, logger]
+  const enhancers = compose(enhancer, applyMiddleware(...middlewares))
 
-  return store
+  store = createStore(rootReducer, preloadedState, enhancers)
+  return { store, initialDispatch }
 }
 
 export default configureStore

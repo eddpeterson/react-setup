@@ -1,4 +1,17 @@
+import { NOT_FOUND } from 'redux-first-router'
 import _ from 'lodash'
+
+export const page = (state = 'loc_home', { type }) => {
+  switch (type) {
+    case 'loc_home':
+    case 'loc_autoload':
+      return 'ExchangeRates'
+    case NOT_FOUND:
+      return 'NotFound'
+    default:
+      return state
+  }
+}
 
 export const ratesInProgress = (state = false, { type }) => {
   switch (type) {
